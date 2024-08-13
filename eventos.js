@@ -1,5 +1,12 @@
-let llamarDiv = document.getElementById("contenedor");
+let llamandoDiv = document.getElementById("contenedor"); 
+let llamandoBoton = document.getElementById("boton");
 
-llamarDiv.addEventListener('click', function(){
-    alert("Hola! Soy el div"); 
-})
+
+llamandoBoton.addEventListener('click', function(event){
+    alert("Hola!"); 
+    event.stopPropagation();
+});
+
+llamandoDiv.addEventListener('click', function(){
+    alert("Hola! Soy el div");
+});
